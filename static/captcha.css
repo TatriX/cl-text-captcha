@@ -1,0 +1,31 @@
+body {
+    background: #333;
+    color: #fff;
+    font-family:  Helvetica, Arial sans-serif; 
+}
+iframe {
+    border: none;
+}
+label {
+    display: block;
+}
+input {
+    border: #999;
+    background: #666;
+    color: #fff;
+    display: block;
+    margin: 5px 0;
+    width: 75%;
+    padding: 5px;
+}
+button {
+    background: #777;
+    color: #fff;
+    border: 1px outset #999;
+}
+.correct {
+    color: lightgreen;
+}
+.incorrect {
+    color: red;
+}

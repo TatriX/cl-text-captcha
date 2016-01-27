@@ -1,0 +1,23 @@
+;;;; -*- mode: Lisp;-*-
+(:chain ((:start-object :modify-object :query-object)
+         (:start-object :modify-object :modify-object :query-object)
+         (:start-object :query-object)
+         (:start-num :modify-num)
+         (:start-num :modify-num :modify-num))
+ :object ("apple"
+          "orange"
+          "banana")
+ :start-object (("start with ~d ~a~p" :num-objects)
+                ("go buy ~d ~a~p" :num-objects))
+ :modify-object (("eat ~d of them" :num-sub)
+                 ("sell them all" :num-reset))
+ :query-object (("how many are left")
+                ("how many ~as do you have now" :get-object))
+ :start-num (("what is ~a" :num)
+             ("calculate ~a" :num))
+ :modify-num (("times ~d" :num-mul)
+              ("multiplied by ~d" :num-mul)
+              ("plus ~d" :num-add)
+              ("add ~d" :num-add)
+              ("minus ~d" :num-sub)
+              ("subtract ~d" :num-sub)))
